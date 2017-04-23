@@ -1,0 +1,28 @@
+{
+  "name": "angular4-lib-starter",
+  "version": "1.0.1",
+  "description": "starter library for angular4 component modules",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chase2981/angular4-lib-starter.git"
+  },
+  "keywords": [
+    "angular",
+    "lib",
+    "angular4",
+    "starter",
+    "component",
+    "modules",
+    "advanced"
+  ],
+  "author": "chase g. <cwgibb@aggiemail.usu.edu> (http://turbonemesis.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chase2981/angular4-lib-starter/issues"
+  },
+  "homepage": "https://github.com/chase2981/angular4-lib-starter#readme"
+}

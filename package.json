@@ -1,14 +1,21 @@
 {
   "name": "angular4-lib-starter",
-  "version": "1.0.2",
+  "version": "0.0.0-development",
   "description": "starter library for angular4 component modules",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chase2981/angular4-lib-starter.git"
+    "url": "https://github.com/chase2981/angular4-lib-starter.git"
   },
   "keywords": [
     "angular",
@@ -24,5 +31,10 @@
   "bugs": {
     "url": "https://github.com/chase2981/angular4-lib-starter/issues"
   },
-  "homepage": "https://github.com/chase2981/angular4-lib-starter#readme"
+  "homepage": "https://github.com/chase2981/angular4-lib-starter#readme",
+  "devDependencies": {
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.0.0",
+    "semantic-release": "^6.3.2"
+  }
 }

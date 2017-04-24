@@ -4,6 +4,7 @@
   "description": "starter library for angular4 component modules",
   "main": "src/index.js",
   "scripts": {
+    "precommit": "npm test",
     "commit": "git-cz",
     "test": "echo \"tests will go here..\"",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -35,6 +36,7 @@
   "devDependencies": {
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.0.0",
+    "husky": "^0.13.3",
     "semantic-release": "^6.3.2"
   }
 }

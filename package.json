@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "commit": "git-cz",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"tests will go here..\"",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "config": {

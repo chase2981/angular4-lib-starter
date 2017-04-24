@@ -1,6 +1,6 @@
 {
   "name": "angular4-lib-starter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "starter library for angular4 component modules",
   "main": "src/index.js",
   "scripts": {

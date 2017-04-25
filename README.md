@@ -1,4 +1,4 @@
-[![travis build](https://img.shields.io/travis/chase2981/angular4-lib-starter.svg?style=flat-square)](https://travis-ci.org/kentcdodds/starwars-names)
+[![travis build](https://img.shields.io/travis/chase2981/angular4-lib-starter.svg?style=flat-square)](https://travis-ci.org/chase2981/angular4-lib-starter)
 
 # angular4-lib-starter 
 ###  (currently in development)

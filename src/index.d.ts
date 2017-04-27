@@ -1,4 +1,4 @@
 /**
  * Generated bundle index. Do not edit.
  */
-//# sourceMappingURL=index.js.map
+export * from './main-aot';

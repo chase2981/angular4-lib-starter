@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es2015", "dom"],
+    "noImplicitAny": true,
+    "declaration": true,
+    "stripInternal": true,
+    "skipLibCheck": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "typeRoots": [
+      "./node_modules/@types/"
+    ]
+  },
+  "files": [
+    "src/main-aot.ts"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "build",
+    "annotateForClosureCompiler": true,
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": false,
+    "flatModuleOutFile": "main.js",
+    "flatModuleId": "angular4-lib-starter"
+  }
+}

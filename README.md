@@ -8,3 +8,6 @@ starter angular4 library
 `npm i -g semantic-release-cli`
 
 `semantic-release-cli setup`
+
+## check back in a week or two ;)
+### i want to get this right!!

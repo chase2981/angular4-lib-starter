@@ -20,10 +20,11 @@
     "src/main-aot.ts"
   ],
   "angularCompilerOptions": {
+    "genDir": "build",
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
-    "skipTemplateCodegen": true,
-    "flatModuleOutFile": "index.js",
+    "skipTemplateCodegen": false,
+    "flatModuleOutFile": "main.js",
     "flatModuleId": "angular4-lib-starter"
   }
 }

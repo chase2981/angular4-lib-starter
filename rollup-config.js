@@ -9,6 +9,7 @@ export default {
   sourceMap: true,
   sourceMapFile: 'dist/main.umd.js.map',
   format: 'umd',
+  external: ['@angular', 'rxjs'],
   onwarn: function(warning) {
     // Skip certain warnings
     // should intercept ... but doesn't in some rollup versions

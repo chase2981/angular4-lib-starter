@@ -4,10 +4,11 @@ import commonjs    from 'rollup-plugin-commonjs';
 import uglify      from 'rollup-plugin-uglify'
 //paths are relative to the execution path
 export default {
-  entry: 'build/main.js',
-  dest: 'dist/main.umd.js', // output a single application bundle
+  moduleName: 'angular4-lib-starter',
+  entry: 'build/index.js',
+  dest: 'dist/index.js', // output a single application bundle
   sourceMap: true,
-  sourceMapFile: 'dist/main.umd.js.map',
+  sourceMapFile: 'dist/index.js.map',
   format: 'umd',
   external: ['@angular', 'rxjs'],
   onwarn: function(warning) {

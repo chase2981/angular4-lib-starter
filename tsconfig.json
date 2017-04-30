@@ -3,6 +3,7 @@
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
+    "baseUrl": "node_modules",
     "emitDecoratorMetadata": true,
     "suppressImplicitAnyIndexErrors": true,
     "declaration": true,
@@ -10,7 +11,7 @@
     "experimentalDecorators": true,
     "lib": ["es2015", "dom"],
     "skipLibCheck": true,
-    "outDir": "./build",
+    "outDir": "build",
     "types": [],
     "typeRoots": [
       "./node_modules/@types/"
@@ -19,10 +20,14 @@
   "files": [
     "src/main.ts"
   ],
+  "exclude": [
+    "node_modules"
+  ],
   "angularCompilerOptions": {
-    "genDir": ".",
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
-    "skipTemplateCodegen": false
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "index.js",
+    "flatModuleId": "angular4-lib-starter"
   }
 }

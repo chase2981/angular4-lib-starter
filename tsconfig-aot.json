@@ -4,6 +4,7 @@
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
+    "baseUrl": "node_modules",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": ["es2015", "dom"],

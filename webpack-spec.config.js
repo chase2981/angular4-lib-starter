@@ -13,7 +13,7 @@ module.exports = () => {
       },
 
       module: {
-        exprContextCritical: true,
+        exprContextCritical: false,
 
         rules: [{
             test: /\.ts$/,

@@ -14,6 +14,7 @@
     "precommit": "npm test",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "serve:aot": "lite-server -c bs-config.aot.json",
+    "start": "npm run build",
     "test": "echo \"tests will go here..\""
   },
   "config": {
@@ -54,10 +55,10 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.0",
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
+    "@types/webpack-env": "^1.12.1",
     "babel-cli": "6.11.4",
     "babel-loader": "6.2.4",
     "babel-preset-es2015": "6.13.2",
@@ -77,8 +78,6 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "lite-server": "2.3.0",
-    "npm-run-all": "4.0.2",
-    "protractor": "~5.1.0",
     "rimraf": "2.5.4",
     "rollup": "0.41.6",
     "rollup-plugin-commonjs": "8.0.2",
@@ -88,6 +87,16 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0",
-    "webpack": "2.4.1"
+    "webpack": "2.4.1",
+    "angular2-template-loader": "0.6.2",
+    "awesome-typescript-loader": "3.1.3",
+    "jasmine": "^2.5.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.8.0",
+    "node-static": "^0.7.9",
+    "raw-loader": "0.5.1"
+  },
+  "optionalDependencies": {
+    "@angular/cli": "^1.0.1"
   }
 }

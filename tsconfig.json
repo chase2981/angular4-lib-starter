@@ -20,9 +20,6 @@
   "files": [
     "src/main.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ],
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,

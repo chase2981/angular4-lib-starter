@@ -10,7 +10,9 @@ module.exports = () => {
     resolve: {
       extensions: ['.js', '.ts', '.html']
     },
+
     module: {
+      exprContextCritical: false,
       rules: [{
           test: /\.ts$/,
           loaders: [
@@ -29,6 +31,16 @@ module.exports = () => {
         }
       ]
     },
-    devtool: 'inline-source-map'
+    devtool: 'inline-source-map',
+    devServer: {
+      historyApiFallback: true,
+      stats: 'minimal'
+    }
+    // plugins: [
+    //   new webpack.ContextReplacementPlugin(
+    //     /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+    //     __dirname
+    //   ),
+    // ]
   };
 };

@@ -19,7 +19,6 @@ module.exports = function(config) {
     ],
     /* test files */
     files: [
-      { pattern: 'src/polyfills.ts', watched: false },
       { pattern: 'src/test.ts', watched: false }
     ],
     preprocessors: {
@@ -66,7 +65,7 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_DEBUG,
     autoWatch: false,
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
     singleRun: true,
 
     mime: {
@@ -88,7 +87,7 @@ module.exports = function(config) {
   });
 
   if (process.env.TRAVIS || process.env.CIRCLECI) {
-    config.browsers = ['Chrome_travis_ci'];
+    // config.browsers = ['Chrome_travis_ci'];
     config.singleRun = true;
     config.browserNoActivityTimeout = 20000;
   }

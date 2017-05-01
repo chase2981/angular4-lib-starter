@@ -19,6 +19,6 @@
       "src/test.ts"
     ],
     "awesomeTypeScriptLoaderOptions": {
-        "useWebpackText": true
+        "useWebpackText": false
     }
 }

@@ -1,5 +1,8 @@
+const ForkCheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
+
 module.exports = () => {
   return {
+    devtool: 'inline-source-map',
     entry: {
       main: './src/main.ts'
     },
@@ -13,6 +16,7 @@ module.exports = () => {
 
     module: {
       exprContextCritical: false,
+
       rules: [{
           test: /\.ts$/,
           loaders: [
@@ -31,7 +35,11 @@ module.exports = () => {
         }
       ]
     },
-    devtool: 'inline-source-map',
+
+    plugins: [
+      new ForkCheckerPlugin(),
+    ],
+
     devServer: {
       historyApiFallback: true,
       stats: 'minimal'

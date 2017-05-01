@@ -17,7 +17,7 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "serve:aot": "lite-server -c bs-config.aot.json",
     "start": "npm run build",
-    "test": "karma start"
+    "test": "./node_modules/.bin/karma start"
   },
   "config": {
     "commitizen": {

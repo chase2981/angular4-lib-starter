@@ -1,6 +1,5 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/0.13/config/configuration-file.html
-'use strict';
 
 var argv = require('yargs').argv;
 var minimatch = require("minimatch");
@@ -15,9 +14,10 @@ module.exports = function(config) {
       require('karma-jasmine-html-reporter'),
       require('karma-webpack'),
       require('karma-sourcemap-loader'),
-      //require('karma-phantomjs-launcher')
-      //require('karma-coverage-istanbul-reporter')
+      require('karma-phantomjs-launcher'),
+      require('karma-coverage-istanbul-reporter')
     ],
+    /* test files */
     files: [
       { pattern: 'src/polyfills.ts', watched: false },
       { pattern: 'src/test.ts', watched: false }
@@ -25,11 +25,46 @@ module.exports = function(config) {
     preprocessors: {
       '**/*.ts': ['webpack', 'sourcemap']
     },
-    webpack: require('./webpack-spec.config')({ env: 'test' }),
+    /* build files */
+    webpack: {
+      devtool: 'inline-source-map',
+      entry: {
+        main: './src/main.ts'
+      },
+      output: {
+        path: './dist',
+        filename: '[name].bundle.js'
+      },
+      resolve: {
+        extensions: ['.js', '.ts', '.html']
+      },
+
+      module: {
+        exprContextCritical: true,
+
+        rules: [{
+            test: /\.ts$/,
+            loaders: [
+              'awesome-typescript-loader?configFileName=tsconfig-spec.json',
+              'angular2-template-loader'
+            ]
+          },
+          {
+            test: /\.html$/,
+            loader: 'raw-loader'
+          },
+          {
+            test: /\.css$/,
+            //include: helpers.root('src', 'app'),
+            loader: 'raw-loader'
+          }
+        ]
+      }
+    },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
     autoWatch: false,
     browsers: ['Chrome'],
     singleRun: true,
@@ -48,7 +83,7 @@ module.exports = function(config) {
     // Passing command line arguments to tests
     client: {
       files: argv.files ? minimatch.makeRe(argv.files).source : null,
-      clearContext: false
+      //clearContext: false
     }
   });
 

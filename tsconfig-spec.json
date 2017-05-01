@@ -16,7 +16,7 @@
         ]
     },
     "files": [
-      "src/main-spec.ts"
+      "src/test.ts"
     ],
     "awesomeTypeScriptLoaderOptions": {
         "useWebpackText": true

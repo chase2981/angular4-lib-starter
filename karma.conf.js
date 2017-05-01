@@ -15,7 +15,7 @@ module.exports = function(config) {
       require('karma-jasmine-html-reporter'),
       require('karma-webpack'),
       require('karma-sourcemap-loader'),
-      require('webpack-dev-server')
+      //require('karma-phantomjs-launcher')
       //require('karma-coverage-istanbul-reporter')
     ],
     files: [
@@ -55,6 +55,6 @@ module.exports = function(config) {
   if (process.env.TRAVIS || process.env.CIRCLECI) {
     config.browsers = ['Chrome_travis_ci'];
     config.singleRun = true;
-    config.browserNoActivityTimeout = 10000;
+    config.browserNoActivityTimeout = 20000;
   }
 }

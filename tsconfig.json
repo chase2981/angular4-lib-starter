@@ -12,7 +12,9 @@
     "lib": ["es2015", "dom"],
     "skipLibCheck": true,
     "outDir": "build",
-    "types": [],
+    "types": [
+      "node"
+    ],
     "typeRoots": [
       "./node_modules/@types/"
     ]

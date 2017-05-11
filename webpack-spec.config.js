@@ -1,3 +1,5 @@
+const join = require('path').join;
+
 module.exports = () => {
   return {
       devtool: 'inline-source-map',
@@ -5,7 +7,7 @@ module.exports = () => {
         main: './src/main.ts'
       },
       output: {
-        path: './dist',
+        path: join(__dirname, 'spec'),
         filename: '[name].bundle.js'
       },
       resolve: {

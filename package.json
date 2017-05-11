@@ -5,11 +5,11 @@
   "main": "src/index.js",
   "scripts": {
     "build-aot": "ngc -p tsconfig-aot.json && rollup -c rollup-config.js",
-    "build": "./build.sh",
+    "build": "./rollup.sh",
     "build:main": "babel --copy-files --out-dir dist --ignore *.test.js src",
     "build:umd": "webpack --output-filename main.umd.js",
     "build:umd.min": "webpack --output-filename main.umd.min.js -p",
-    "clean": "rimraf build dist aot coverage",
+    "clean": "rimraf build dist aot coverage webpack",
     "commit": "git-cz",
     "prebuild": "rimraf dist",
     "precommit": "npm test",
@@ -17,6 +17,8 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "serve:aot": "lite-server -c bs-config.aot.json",
     "start": "npm run build",
+    "webpack:dev": "npm run build:umd",
+    "webpack:prod": "npm run build:umd.min",
     "test": "./node_modules/.bin/karma start"
   },
   "config": {

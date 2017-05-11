@@ -1,19 +1,41 @@
 const join = require('path').join;
 
-const include = join(__dirname, 'src')
-
-module.exports = {
-    entry: './src/main',
-    output: {
-        path: join(__dirname, 'dist'),
-        libraryTarget: 'umd',
-        library: 'angular4LibStarter'
+module.exports = () => {
+  return {
+    devtool: 'inline-source-map',
+    entry: {
+      main: './src/main.ts'
     },
-    devtool: 'source-map',
+    output: {
+      path: join(__dirname, 'dist'),
+      libraryTarget: 'umd',
+      library: 'angular4LibStarter',
+      filename: 'index.js'
+      //filename: '[name].bundle.js'
+    },
+    resolve: {
+      extensions: ['.js', '.ts', '.html']
+    },
+
     module: {
-        loaders: [
-            { test: /\.js$/, loader: 'babel-loader', include },
-            { test: /\.json$/, loader: 'json-loader', include }
-        ]
+      exprContextCritical: false,
+
+      rules: [{
+          test: /\.ts$/,
+          loaders: [
+            'awesome-typescript-loader?configFileName=tsconfig.json',
+            'angular2-template-loader'
+          ]
+        },
+        {
+          test: /\.html$/,
+          loader: 'raw-loader'
+        },
+        {
+          test: /\.css$/,
+          loader: 'raw-loader'
+        }
+      ]
     }
-}
+  }
+};

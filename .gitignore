@@ -1,6 +1,5 @@
 node_modules
 build
 aot
-dist
 coverage
 webpack

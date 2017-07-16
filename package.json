@@ -3,6 +3,7 @@
   "version": "0.0.0-development",
   "description": "starter library for angular4 component modules",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "test:once": "npm run build:tsc && karma start karma.conf.js --single-run",
     "build:tsc": "tsc -p src/",

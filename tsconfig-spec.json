@@ -1,22 +1,38 @@
 {
     "compilerOptions": {
-        "module": "es2015",
+        "module": "UMD",
         "target": "es5",
+        "baseUrl": "node_modules",
         "noImplicitAny": false,
         "sourceMap": true,
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
+        "skipLibCheck": true,
+        "outDir": "./dist",
         "lib": [
-            "es2015", "dom"
+            "es2015",
+            "es6",
+            "dom"
         ],
         "types": [
             "node",
             "jasmine"
+        ],
+        "typeRoots": [
+            "./node_modules/@types/"
         ]
     },
     "files": [
-      "src/test.ts"
+        "src/test.ts"
+    ],
+    "include": [
+        "src/main.ts",
+        "**/*.spec.ts",
+        "**.d.ts"
+    ],
+    "exclude": [
+        "node_modules"
     ],
     "awesomeTypeScriptLoaderOptions": {
         "useWebpackText": false

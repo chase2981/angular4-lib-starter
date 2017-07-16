@@ -14,9 +14,9 @@ ROLLUP="node node_modules/.bin/rollup"
 $TSC -p src/
 
 # Copy non-ts files from src
-rsync -a --exclude=*.ts src/app dist
+# rsync -a --exclude=*.ts src/app dist
 
 # $BABEL --copy-files --out-dir build dist
 
 # start karma
-$KARMA start
+$KARMA start --single-run

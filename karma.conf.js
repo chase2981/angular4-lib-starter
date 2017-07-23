@@ -34,7 +34,7 @@ module.exports = function(config) {
       {pattern: 'test/karma-test-shim.js', included: true, watched: false},
 
       // 'build/systemjs.config.js',
-      'build/entry-spec.js',
+      'build/browser-test-shim.js',
 
       //'build/**/*.+(js|js.map|css|html)',
 

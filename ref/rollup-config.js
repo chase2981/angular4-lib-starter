@@ -5,7 +5,7 @@ import uglify      from 'rollup-plugin-uglify'
 //paths are relative to the execution path
 export default {
   moduleName: 'angular4-lib-starter',
-  entry: 'build/index.js',
+  entry: 'build/entry.js',
   dest: 'dist/index.js', // output a single application bundle
   sourceMap: true,
   sourceMapFile: 'dist/index.js.map',

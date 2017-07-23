@@ -1,7 +1,6 @@
 # Clean up previous distributions
-rm -rf aot
-rm -rf dist
 rm -rf build
+rm -rf dist
 
 # Variables
 BABEL="node node_modules/.bin/babel"
@@ -11,7 +10,7 @@ TSC="node node_modules/.bin/tsc"
 ROLLUP="node node_modules/.bin/rollup"
 
 # Run Angular Compiler
-$TSC -p src/
+$TSC -p src/tsconfig.json
 
 # Copy non-ts files from src
 # rsync -a --exclude=*.ts src/app dist

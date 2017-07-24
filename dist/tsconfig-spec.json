@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "UMD",
+    "moduleResolution": "node",
+    "baseUrl": "../node_modules",
+    "emitDecoratorMetadata": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "declaration": true,
+    "stripInternal": true,
+    "experimentalDecorators": true,
+    "lib": ["es2015", "es6", "dom"],
+    "skipLibCheck": false,
+    "outDir": "../build",
+    "typeRoots": [
+      "./node_modules/@types/"
+    ]
+  },
+  "files": [
+    "public_api.ts"
+  ],
+  "include": [
+    "browser-test-shim.ts",
+    "systemjs.config.ts",
+    "typings.d.ts",
+    "**/*.spec.ts"
+  ],
+  "exclude": [
+    "**/node_modules"
+  ],
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "index.js",
+    "flatModuleId": "angular4-lib-starter"
+  }
+}

@@ -1,6 +1,5 @@
 # Clean up previous distributions
 rm -rf build
-rm -rf dist
 
 # Variables
 KARMA="node node_modules/.bin/karma"

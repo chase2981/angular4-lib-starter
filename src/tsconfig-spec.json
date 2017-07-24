@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "UMD",
+    "module": "umd",
     "moduleResolution": "node",
     "baseUrl": "../node_modules",
     "emitDecoratorMetadata": true,

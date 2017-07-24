@@ -2,7 +2,7 @@
   "name": "angular4-lib-starter",
   "version": "0.0.0-development",
   "description": "starter library for angular4 component modules",
-  "main": "dist/index.js",
+  "main": "dist/index.min.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "./build.sh",

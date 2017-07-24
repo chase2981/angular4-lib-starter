@@ -12,16 +12,19 @@ ROLLUP="node node_modules/.bin/rollup"
 # $NGC -p src/tsconfig.json
 
 # Run Typescript Compiler
-$TSC -p src/tsconfig.json
+$NGC -p src/tsconfig.json
 
 # Rollup simple-ui-lib.js
-$ROLLUP -c ref/rollup-config.js
+# $ROLLUP -c .rollup-config.js
 
-# Copy non-js files from build
-rsync -a --exclude=*.js build/ dist
+# Copy html files from src to dist
+rsync -a --exclude=*.ts src/ dist/
+
+# Copy non-js files from build to dist
+rsync -a build/ dist/
 
 # Copy library package.json
-cp src/package.json dist/package.json
+# cp src/package.json dist/package.json
 
 # Run Angular Compiler to ES5
 # $NGC -p src/tsconfig-es5.json

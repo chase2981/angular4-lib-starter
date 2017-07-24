@@ -5,16 +5,16 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "./scripts/build.sh",
+    "build": "./build.sh",
     "clean": "rimraf build dist",
     "commit": "git-cz",
     "prebuild": "npm run clean",
     "postcommit": "npm test",
     "reset": "npm run clean & rimraf node_modules",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "serve": "lite-server -c=bs-config.json",
+    "serve": "lite-server -c=.bs-config.json",
     "start": "npm run serve",
-    "test": "./scripts/test.sh"
+    "test": "./test.sh"
   },
   "config": {
     "commitizen": {

@@ -20,7 +20,10 @@
     "public_api.ts"
   ],
   "include": [
-    "typings.d.ts"
+    "browser-test-shim.ts",
+    "systemjs.config.ts",
+    "typings.d.ts",
+    "**/*.spec.ts"
   ],
   "exclude": [
     "**/node_modules"

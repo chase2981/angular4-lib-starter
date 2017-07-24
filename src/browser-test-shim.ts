@@ -1,4 +1,6 @@
-/*global jasmine, __karma__, window*/
+declare var System: any;
+declare var __karma__: any;
+
 Error.stackTraceLimit = Infinity;
 
 // The default time that jasmine waits for an asynchronous test to finish is five seconds.

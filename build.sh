@@ -1,18 +1,32 @@
+#!/bin/bash
+
+# Declaration(s)
+NGC="node node_modules/.bin/ngc"
+TSC="node node_modules/.bin/tsc"
+ROLLUP="node node_modules/.bin/rollup"
+
 # Clean up previous distributions
 rm -rf aot
 rm -rf dist
 rm -rf build
 
-# Variables
-NGC="node node_modules/.bin/ngc"
-TSC="node node_modules/.bin/tsc"
-ROLLUP="node node_modules/.bin/rollup"
-
 # Run Typescript Compiler
-$NGC -p src/tsconfig.json
+# $NGC -p src/tsconfig.json
+$TSC -p src/tsconfig.json
 
 # Copy html files from src to dist
-rsync -a --exclude=*.ts src/ dist/
+# rsync -a --exclude=*.ts src/ dist/
+let prev_process_code=$?
+
+# Basic if statement
+if [ $(( $prev_process_code == 0 )) ]
+then
+echo success!!.
+pwd
+else
+echo compilation failed!!
+fi
+date
 
 # Copy non-js files from build to dist
 rsync -a build/ dist/

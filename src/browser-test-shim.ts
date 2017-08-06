@@ -11,7 +11,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
 __karma__.loaded = function () {};
 
 var baseDir = '/base';
-var specFiles = Object.keys(window.__karma__.files).filter(isMaterialSpecFile);
+var specFiles = Object.keys(__karma__.files).filter(isMaterialSpecFile);
 
 // Configure the base path and map the different node packages.
 System.config({

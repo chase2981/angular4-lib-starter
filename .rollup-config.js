@@ -5,10 +5,10 @@ import uglify      from 'rollup-plugin-uglify'
 //paths are relative to the execution path
 export default {
   moduleName: 'angular4-lib-starter',
-  entry: 'build/index.js',
-  dest: 'dist/index.min.js', // output a single application bundle
+  entry: 'build/public_api.js',
+  dest: 'dist/public_api.min.js', // output a single application bundle
   sourceMap: true,
-  sourceMapFile: 'dist/index.min.js.map',
+  sourceMapFile: 'dist/public_api.min.js.map',
   format: 'umd',
   external: ['@angular', 'rxjs'],
   onwarn: function(warning) {

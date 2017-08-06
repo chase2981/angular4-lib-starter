@@ -3,17 +3,22 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
-    "baseUrl": "../node_modules",
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "declaration": true,
-    "stripInternal": true,
     "experimentalDecorators": true,
-    "lib": ["es2015", "es6", "dom"],
-    "skipLibCheck": false,
-    "outDir": "../build",
+    "lib": [
+      "es2015",
+      "es6",
+      "dom"
+    ],
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
+    "baseUrl": "../node_modules/",
+    "outDir": "../build/",
+    "declaration": true,
     "typeRoots": [
-      "./node_modules/@types/"
+      "../node_modules/@types/"
     ]
   },
   "files": [
@@ -22,14 +27,16 @@
   "include": [
     "typings.d.ts"
   ],
-  "exclude": [
-    "**/node_modules"
-  ],
   "angularCompilerOptions": {
-    "annotateForClosureCompiler": true,
-    "strictMetadataEmit": true,
-    "skipTemplateCodegen": true,
-    "flatModuleOutFile": "index.js",
-    "flatModuleId": "angular4-lib-starter"
+    "genDir": "../build/",
+    /* "skipMetadataEmit" : true,
+      "flatModuleOutFile": "public_api.js", */
+    "annotateForClosureCompiler": true
+    /* "strictMetadataEmit": true,
+      "skipTemplateCodegen": false,
+    /* "flatModuleOutFile": "public_api.js",
+      "flatModuleId": "angular4-lib-starter" */
+    // "entryModule": "lib/modal/modal.module#ModalModule"
+    // "strictMetadataEmit": true
   }
 }

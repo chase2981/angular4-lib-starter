@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,14 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
+import { Component, ElementRef, EventEmitter, HostBinding, Input, Output } from '@angular/core';
 var ModalComponent = (function () {
     function ModalComponent(elementRef) {
         this.options = {};
-        this.shown = new core_1.EventEmitter();
-        this.hidden = new core_1.EventEmitter();
-        this.loaded = new core_1.EventEmitter();
+        this.shown = new EventEmitter();
+        this.hidden = new EventEmitter();
+        this.loaded = new EventEmitter();
         this.classModal = true;
         this.classFade = true;
         this.elem = elementRef.nativeElement;
@@ -62,37 +60,37 @@ var ModalComponent = (function () {
         //$(this.elem).data('bs.modal', null);
     };
     __decorate([
-        core_1.Input(),
+        Input(),
         __metadata("design:type", Object)
     ], ModalComponent.prototype, "options", void 0);
     __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
+        Output(),
+        __metadata("design:type", EventEmitter)
     ], ModalComponent.prototype, "shown", void 0);
     __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
+        Output(),
+        __metadata("design:type", EventEmitter)
     ], ModalComponent.prototype, "hidden", void 0);
     __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
+        Output(),
+        __metadata("design:type", EventEmitter)
     ], ModalComponent.prototype, "loaded", void 0);
     __decorate([
-        core_1.HostBinding('class.modal'),
+        HostBinding('class.modal'),
         __metadata("design:type", Object)
     ], ModalComponent.prototype, "classModal", void 0);
     __decorate([
-        core_1.HostBinding('class.fade'),
+        HostBinding('class.fade'),
         __metadata("design:type", Object)
     ], ModalComponent.prototype, "classFade", void 0);
     ModalComponent = __decorate([
-        core_1.Component({
+        Component({
             selector: 'rd-modal',
             template: '<div></div>'
         }),
-        __metadata("design:paramtypes", [core_1.ElementRef])
+        __metadata("design:paramtypes", [ElementRef])
     ], ModalComponent);
     return ModalComponent;
 }());
-exports.ModalComponent = ModalComponent;
+export { ModalComponent };
 //# sourceMappingURL=modal.component.js.map

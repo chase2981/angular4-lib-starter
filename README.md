@@ -6,13 +6,6 @@
 
 starter angular4 library
 
-`npm i -g semantic-release-cli`
-
-`semantic-release-cli setup`
-
-## check back in a week or two ;)
-### i want to get this right!!
-
 <!--
 # Todo app with Angular2, AngularFire2, and Firebase SDK 3
 A simple Todo app example built with **Angular2** and **AngularFire2**. The app features a **Firebase** backend with **OAuth** authentication. Try the demo at <a href="https://ng2-todo-app.firebaseapp.com" target="_blank">ng2-todo-app.firebaseapp.com</a>.
@@ -98,4 +91,5 @@ Commands
 |`npm run lint:ts`|Lint `.ts` files with tslint|
 |`npm run server`|Start express server @ `localhost:3001` to serve built artifacts from `./target` (must run `npm run build` first)|
 |`npm test`|Run unit tests with Karma and Jasmine|
-|`npm run test:watch`|Run unit tests with Karma and Jasmine; watch for changes to re-run tests|-->
+|`npm run test:watch`|Run unit tests with Karma and Jasmine; watch for changes to re-run tests|
+-->

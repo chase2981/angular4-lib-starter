@@ -23,13 +23,13 @@ var ModalComponent = (function () {
     ModalComponent.prototype.ngOnInit = function () {
     };
     ModalComponent.prototype.ngAfterViewInit = function () {
-        $(this.elem).modal($.extend({
-            backdrop: true,
-            keyboard: true,
-            show: false
-        }, this.options));
-        this.modal = $(this.elem).data('bs.modal');
-        this.subscribeToModalEvents();
+        // $(this.elem).modal($.extend({
+        //     backdrop: true,
+        //     keyboard: true,
+        //     show: false
+        // }, this.options));
+        // this.modal = $(this.elem).data('bs.modal');
+        // this.subscribeToModalEvents();
     };
     ModalComponent.prototype.handleHeightAdjustment = function () {
         $(this.elem).modal('handleUpdate');

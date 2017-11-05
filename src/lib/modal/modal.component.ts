@@ -28,14 +28,14 @@ export class ModalComponent implements OnInit, AfterViewInit, Modal, OnDestroy {
     }
 
     ngAfterViewInit() {
-        $(this.elem).modal($.extend({
-            backdrop: true,
-            keyboard: true,
-            show: false
-        }, this.options));
+        // $(this.elem).modal($.extend({
+        //     backdrop: true,
+        //     keyboard: true,
+        //     show: false
+        // }, this.options));
 
-        this.modal = $(this.elem).data('bs.modal');
-        this.subscribeToModalEvents();
+        // this.modal = $(this.elem).data('bs.modal');
+        // this.subscribeToModalEvents();
     }
 
     handleHeightAdjustment() {

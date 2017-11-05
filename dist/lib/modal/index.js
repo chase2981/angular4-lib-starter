@@ -1,4 +1,5 @@
 "use strict";
+/// <reference path="./jquery.d.ts" />
 Object.defineProperty(exports, "__esModule", { value: true });
 var modal_module_1 = require("./modal.module");
 exports.ModalModule = modal_module_1.ModalModule;

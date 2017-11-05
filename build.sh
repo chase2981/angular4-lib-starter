@@ -12,7 +12,7 @@ rm -rf build
 
 # Run Typescript Compiler
 # $NGC -p src/tsconfig.json
-$TSC -p src/tsconfig.json
+$NGC -p src/tsconfig.json
 
 # Copy html files from src to dist
 # rsync -a --exclude=*.ts src/ dist/

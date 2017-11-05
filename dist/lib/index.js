@@ -1,7 +1,6 @@
 "use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(require("./modal/index"));
+var index_1 = require("./modal/index");
+exports.ModalModule = index_1.ModalModule;
+exports.ModalComponent = index_1.ModalComponent;
 //# sourceMappingURL=index.js.map

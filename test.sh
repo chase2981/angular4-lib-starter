@@ -14,4 +14,4 @@ $TSC -p src/tsconfig-spec.json
 # rsync -a --exclude=*.ts src/app dist
 
 # start karma
-$KARMA start .karma.conf.js --browsers Chrome --single-run
+$KARMA start .karma.conf.js --browsers PhantomJS --single-run

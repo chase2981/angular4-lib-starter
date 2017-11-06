@@ -20,12 +20,12 @@ let elem: HTMLElement;
 describe('Component: Modal', () => {
   // simple style
   beforeEach(() => {
-    TestBed.configureTestingModule({
+    return TestBed.configureTestingModule({
       imports: [ModalModule]
+    }).compileComponents().then(() => {
+      fixture = TestBed.createComponent(ModalComponent);
+      component = fixture.componentInstance;
     });
-
-    fixture = TestBed.createComponent(ModalComponent);
-    component = fixture.componentInstance;
   });
 
   it('should create an instance', () => {

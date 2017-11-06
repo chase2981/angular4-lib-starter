@@ -8,7 +8,7 @@ TSC="node node_modules/.bin/tsc"
 # Run Angular Compiler
 $TSC -p src/tsconfig-spec.json
 
-# rsync -a --exclude=*.ts src/ build/
+rsync -a --exclude=*.ts src/ build/
 
 # Copy non-ts files from src to dist
 # rsync -a --exclude=*.ts src/app dist

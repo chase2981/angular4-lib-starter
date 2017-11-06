@@ -6,8 +6,9 @@ import {
 import { Modal } from './shared/modal';
 
 @Component({
+    moduleId: module.id,
     selector: 'rd-modal',
-    template: '<div></div>'
+    templateUrl: './modal.component.html'
 })
 export class ModalComponent implements OnInit, AfterViewInit, Modal, OnDestroy {
     @Input() options: any = {};

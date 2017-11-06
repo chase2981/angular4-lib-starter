@@ -9,7 +9,7 @@
     "clean": "rimraf build dist",
     "commit": "git-cz",
     "prebuild": "npm run clean",
-    "postcommit": "npm test",
+    "precommit": "npm test",
     "reset": "npm run clean & rimraf node_modules",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "serve": "lite-server -c=.bs-config.json",

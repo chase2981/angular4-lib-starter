@@ -17,6 +17,10 @@
     "baseUrl": "../node_modules/",
     "outDir": "../build/",
     "declaration": true,
+    "paths": {
+      "@angular": ["../node_modules/@angular/"],
+      "rxjs": ["../node_modules/rxjs/"]
+    },
     "typeRoots": [
       "../node_modules/@types/"
     ]

@@ -6,7 +6,7 @@ import {
 import { Modal } from './shared/modal';
 
 @Component({
-    moduleId: module.id,
+    /* moduleId: module.id, */
     selector: 'rd-modal',
     templateUrl: './modal.component.html'
 })

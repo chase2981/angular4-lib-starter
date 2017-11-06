@@ -6,10 +6,11 @@
   "typings": "dist/public_api.d.ts",
   "scripts": {
     "build": "./build.sh",
-    "clean": "rimraf build dist",
+    "clean": "rimraf build dist tmp",
     "commit": "git-cz",
     "prebuild": "npm run clean",
     "precommit": "npm test",
+    "prepush": "npm test",
     "reset": "npm run clean & rimraf node_modules",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "serve": "lite-server -c=.bs-config.json",
@@ -53,6 +54,8 @@
     "@angular/tsc-wrapped": "4.3.3",
     "angular-in-memory-web-api": "0.3.2",
     "core-js": "2.4.1",
+    "gulp": "3.9.1",
+    "gulp-inline-ng2-template": "4.0.0",
     "jquery": "3.2.1",
     "rxjs": "5.4.2",
     "zone.js": "0.8.16"

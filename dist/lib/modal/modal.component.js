@@ -84,8 +84,9 @@ var ModalComponent = (function () {
     };
     ModalComponent.decorators = [
         { type: core_1.Component, args: [{
+                    moduleId: module.id,
                     selector: 'rd-modal',
-                    template: '<div></div>'
+                    template: "\n      <div class=\"modal-dialog modal-lg\" role=\"document\">\n        <div class=\"modal-content\">\n          <ng-content></ng-content>\n        </div>\n      </div>\n    "
                 },] },
     ];
     /**

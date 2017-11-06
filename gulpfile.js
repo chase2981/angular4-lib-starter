@@ -9,7 +9,7 @@ const exec = require('child_process').exec;
  */
 const INLINE_TEMPLATES = {
   SRC: './src/**/*.ts',
-  DIST: './tmp/src-inlined',
+  DIST: './tmp',
   CONFIG: {
     base: '/src',
     target: 'es6',

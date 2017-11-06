@@ -1,18 +1,23 @@
 #!/bin/bash
 
 # Declaration(s)
+GULP="node node_modules/.bin/gulp"
+KARMA="node node_modules/.bin/karma"
 NGC="node node_modules/.bin/ngc"
-TSC="node node_modules/.bin/tsc"
 ROLLUP="node node_modules/.bin/rollup"
+TSC="node node_modules/.bin/tsc"
 
 # Clean up previous distributions
-rm -rf aot
-rm -rf dist
-rm -rf build
+rm -rf aot dist build tmp
+
+# Run gulp inline-templates
+$GULP inline-templates
+
+# Copy over tsconfig
+cp src/tsconfig.json tmp/tsconfig.json
 
 # Run Typescript Compiler
-# $NGC -p src/tsconfig.json
-$NGC -p src/tsconfig.json
+$NGC -p tmp/tsconfig.json
 
 # Copy html files from src to dist
 # rsync -a --exclude=*.ts src/ dist/

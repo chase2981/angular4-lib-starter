@@ -4,6 +4,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
+    // "mapRoot": ".",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
@@ -14,17 +15,26 @@
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true,
     "skipLibCheck": true,
-    "baseUrl": "../node_modules/",
     "outDir": "../build/",
     "declaration": true,
+    "baseUrl": "..",
     "paths": {
-      "@angular": ["../node_modules/@angular/"],
-      "rxjs": ["../node_modules/rxjs/"]
+      "*": [
+        "*",
+        "../node_modules/*"
+      ]
     },
+    // "rootDirs": [
+    //   "."
+    // ],
     "typeRoots": [
       "../node_modules/@types/"
     ]
   },
+  "exclude": [
+    "node_modules/*",
+    "*/node_modules"
+  ],
   "files": [
     "public_api.ts"
   ],
@@ -33,14 +43,17 @@
   ],
   "angularCompilerOptions": {
     "genDir": "../build/",
+    "diagnostics": true,
+    "trace": true,
     /* "skipMetadataEmit" : true,
       "flatModuleOutFile": "public_api.js", */
-    "annotateForClosureCompiler": true
+    "annotateForClosureCompiler": true,
+    "strictInjectionParameters": true,
+    "generateCodeForLibraries": false
     /* "strictMetadataEmit": true,
       "skipTemplateCodegen": false,
     /* "flatModuleOutFile": "public_api.js",
       "flatModuleId": "angular4-lib-starter" */
     // "entryModule": "lib/modal/modal.module#ModalModule"
-    // "strictMetadataEmit": true
   }
 }

@@ -3,7 +3,7 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
-    "baseUrl": "../node_modules",
+    "baseUrl": "",
     "emitDecoratorMetadata": true,
     "suppressImplicitAnyIndexErrors": true,
     "declaration": true,

@@ -17,7 +17,7 @@ $GULP inline-templates
 cp src/tsconfig.json tmp/tsconfig.json
 
 # Run Typescript Compiler
-$NGC -p tmp/tsconfig.json
+$TSC -p tmp/tsconfig.json
 
 # Copy html files from src to dist
 # rsync -a --exclude=*.ts src/ dist/

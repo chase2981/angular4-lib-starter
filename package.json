@@ -10,7 +10,6 @@
     "commit": "git-cz",
     "prebuild": "npm run clean",
     "precommit": "npm test",
-    "prepush": "npm test",
     "reset": "npm run clean & rimraf node_modules",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "serve": "lite-server -c=.bs-config.json",

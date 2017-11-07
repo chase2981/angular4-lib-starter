@@ -1,16 +1,10 @@
 "use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ModalComponent = (function () {
+    /**
+     * @param {?} elementRef
+     */
     function ModalComponent(elementRef) {
         this.options = {};
         this.shown = new core_1.EventEmitter();
@@ -20,8 +14,14 @@ var ModalComponent = (function () {
         this.classFade = true;
         this.elem = elementRef.nativeElement;
     }
+    /**
+     * @return {?}
+     */
     ModalComponent.prototype.ngOnInit = function () {
     };
+    /**
+     * @return {?}
+     */
     ModalComponent.prototype.ngAfterViewInit = function () {
         // $(this.elem).modal($.extend({
         //     backdrop: true,
@@ -31,18 +31,33 @@ var ModalComponent = (function () {
         // this.modal = $(this.elem).data('bs.modal');
         // this.subscribeToModalEvents();
     };
+    /**
+     * @return {?}
+     */
     ModalComponent.prototype.handleHeightAdjustment = function () {
         $(this.elem).modal('handleUpdate');
     };
+    /**
+     * @return {?}
+     */
     ModalComponent.prototype.hide = function () {
         $(this.elem).modal('hide');
     };
+    /**
+     * @return {?}
+     */
     ModalComponent.prototype.isVisible = function () {
         return this.modal && this.modal.isShown;
     };
+    /**
+     * @return {?}
+     */
     ModalComponent.prototype.show = function () {
         $(this.elem).modal('show');
     };
+    /**
+     * @return {?}
+     */
     ModalComponent.prototype.subscribeToModalEvents = function () {
         var _this = this;
         $(this.elem).on('shown.bs.modal', function () {
@@ -55,45 +70,67 @@ var ModalComponent = (function () {
             _this.loaded.emit(null);
         });
     };
+    /**
+     * @return {?}
+     */
     ModalComponent.prototype.toggle = function () {
         $(this.elem).modal('toggle');
     };
+    /**
+     * @return {?}
+     */
     ModalComponent.prototype.ngOnDestroy = function () {
         //$(this.elem).data('bs.modal', null);
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], ModalComponent.prototype, "options", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], ModalComponent.prototype, "shown", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], ModalComponent.prototype, "hidden", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], ModalComponent.prototype, "loaded", void 0);
-    __decorate([
-        core_1.HostBinding('class.modal'),
-        __metadata("design:type", Object)
-    ], ModalComponent.prototype, "classModal", void 0);
-    __decorate([
-        core_1.HostBinding('class.fade'),
-        __metadata("design:type", Object)
-    ], ModalComponent.prototype, "classFade", void 0);
-    ModalComponent = __decorate([
-        core_1.Component({
-            /* moduleId: module.id, */
-            selector: 'rd-modal',
-            template: "\n      <div class=\"modal-dialog modal-lg\" role=\"document\">\n        <div class=\"modal-content\">\n          <ng-content></ng-content>\n        </div>\n      </div>\n    "
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef])
-    ], ModalComponent);
+    ModalComponent.decorators = [
+        { type: core_1.Component, args: [{
+                    /* moduleId: module.id, */
+                    selector: 'rd-modal',
+                    template: "\n      <div class=\"modal-dialog modal-lg\" role=\"document\">\n        <div class=\"modal-content\">\n          <ng-content></ng-content>\n        </div>\n      </div>\n    "
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    ModalComponent.ctorParameters = function () { return [
+        { type: core_1.ElementRef, },
+    ]; };
+    ModalComponent.propDecorators = {
+        'options': [{ type: core_1.Input },],
+        'shown': [{ type: core_1.Output },],
+        'hidden': [{ type: core_1.Output },],
+        'loaded': [{ type: core_1.Output },],
+        'classModal': [{ type: core_1.HostBinding, args: ['class.modal',] },],
+        'classFade': [{ type: core_1.HostBinding, args: ['class.fade',] },],
+    };
     return ModalComponent;
 }());
 exports.ModalComponent = ModalComponent;
+function ModalComponent_tsickle_Closure_declarations() {
+    /** @type {?} */
+    ModalComponent.decorators;
+    /**
+     * @nocollapse
+     * @type {?}
+     */
+    ModalComponent.ctorParameters;
+    /** @type {?} */
+    ModalComponent.propDecorators;
+    /** @type {?} */
+    ModalComponent.prototype.options;
+    /** @type {?} */
+    ModalComponent.prototype.shown;
+    /** @type {?} */
+    ModalComponent.prototype.hidden;
+    /** @type {?} */
+    ModalComponent.prototype.loaded;
+    /** @type {?} */
+    ModalComponent.prototype.classModal;
+    /** @type {?} */
+    ModalComponent.prototype.classFade;
+    /** @type {?} */
+    ModalComponent.prototype.elem;
+    /** @type {?} */
+    ModalComponent.prototype.modal;
+}
 //# sourceMappingURL=modal.component.js.map

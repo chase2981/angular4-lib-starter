@@ -3,32 +3,27 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
-    "baseUrl": "",
     "emitDecoratorMetadata": true,
     "suppressImplicitAnyIndexErrors": true,
-    "declaration": true,
+    "declaration": false,
     "stripInternal": true,
     "experimentalDecorators": true,
-    "lib": ["es2015", "es6", "dom"],
-    "skipLibCheck": false,
-    "outDir": "../build",
-    "types": [
-      "node",
-      "jasmine",
-      "jquery"
-    ],
+    "skipLibCheck": true,
+    "rootDir": "./tmp",
+    "baseUrl": "./tmp",
+    "outDir": "./build",
     "typeRoots": [
       "./node_modules/@types/"
     ]
   },
   "files": [
-    "public_api.ts"
+    "./tmp/public_api.ts"
   ],
   "include": [
-    "browser-test-shim.ts",
-    "systemjs.config.ts",
-    "typings.d.ts",
-    "**/*.spec.ts"
+    "./tmp/browser-test-shim.ts",
+    "./tmp/systemjs.config.ts",
+    "./tmp/**/*.d.ts",
+    "./tmp/**/*.spec.ts"
   ],
   "exclude": [
     "**/node_modules"

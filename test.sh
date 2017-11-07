@@ -10,11 +10,8 @@ rm -rf build tmp
 # Run gulp inline-templates
 $GULP inline-templates
 
-# Copy over tsconfig
-cp src/tsconfig-spec.json tmp/tsconfig-spec.json
-
 # Run Angular Compiler
-$TSC -p tmp/tsconfig-spec.json
+$TSC -p tsconfig-spec.json
 
 # rsync -a --exclude=*.ts src/ build/
 

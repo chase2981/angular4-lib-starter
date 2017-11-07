@@ -1,30 +1,65 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
-    "declaration": true,
-    "removeComments": false,
-    "noImplicitAny": true,
-    "experimentalDecorators": true,
+    // "mapRoot": ".",
     "emitDecoratorMetadata": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "pretty": true,
-    "stripInternal": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
     "skipLibCheck": true,
-    "outDir": "dist",
-    "rootDir": "./tmp/src-inlined"
+    "rootDir": "./tmp",
+    "baseUrl": "./tmp",
+    "outDir": "./build",
+    "declaration": true,
+    // "baseUrl": "..",
+    // "paths": {
+    //   "*": [
+    //     "*",
+    //     "../node_modules/*"
+    //   ]
+    // },
+    // "rootDirs": [
+    //   "."
+    // ],
+    "listFiles": true,
+    "typeRoots": [
+      "./node_modules/@types/"
+    ]
   },
   "files": [
-    "./tmp/src-inlined/index.ts"
+    "./tmp/public_api.ts"
   ],
+  "include": [
+    "./tmp/**/*.d.ts"
+  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "**/node_modules"
+  ],
+  /* https://github.com/angular/angular/blob/745b59f49cacb55c54d11e948c011fbbf8b724f7/packages/compiler-cli/src/transformers/api.ts */
+  // "angularCompilerOptions": {
+  //   "genDir": "./build",
+  //   // "diagnostics": true,
+  //   // "trace": true,
+  //   /* "skipMetadataEmit" : true,
+  //     "flatModuleOutFile": "public_api.js", */
+  //   "annotateForClosureCompiler": true,
+  //   // "strictInjectionParameters": true,
+  //   "generateCodeForLibraries": false,
+  //   "skipMetadataEmit": true,
+  //   "allowEmptyCodegenFiles": true
+  //   /* "flatModuleOutFile": "public_api.js",
+  //     "flatModuleId": "angular4-lib-starter" */
+  //   // "entryModule": "lib/modal/modal.module#ModalModule"
+  // }
   "angularCompilerOptions": {
-    "genDir": "dist",
-    "debug": true,
+    "annotateForClosureCompiler": true,
+    "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
-    "skipMetadataEmit": false,
-    "strictMetadataEmit": true
+    "flatModuleOutFile": "index.js",
+    "flatModuleId": "angular4-lib-starter"
   }
 }

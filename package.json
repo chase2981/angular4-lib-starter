@@ -2,8 +2,8 @@
   "name": "angular4-lib-starter",
   "version": "0.0.0-development",
   "description": "starter library for angular4 component modules",
-  "main": "dist/public_api.js",
-  "typings": "dist/public_api.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "build": "./build.sh",
     "clean": "rimraf build dist tmp",

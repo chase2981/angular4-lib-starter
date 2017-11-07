@@ -10,7 +10,7 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "rootDir": "./tmp",
-    "baseUrl": "./tmp",
+    "baseUrl": ".",
     "outDir": "./build",
     "typeRoots": [
       "./node_modules/@types/"

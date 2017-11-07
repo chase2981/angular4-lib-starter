@@ -11,7 +11,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "skipLibCheck": true,
     "rootDir": "./tmp",
-    "baseUrl": "./tmp",
+    "baseUrl": ".",
     "outDir": "./build",
     "declaration": true,
     // "baseUrl": "..",

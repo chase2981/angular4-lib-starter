@@ -14,16 +14,11 @@
     "baseUrl": ".",
     "outDir": "./build",
     "declaration": true,
-    // "baseUrl": "..",
-    // "paths": {
-    //   "*": [
-    //     "*",
-    //     "../node_modules/*"
-    //   ]
-    // },
-    // "rootDirs": [
-    //   "."
-    // ],
+    "paths": {
+      "jquery": ["node_modules/jquery/dist/jquery"],
+      "@angular": ["node_modules/@angular/"],
+      "rxjs": ["node_modules/rxjs/"] // This mapping is relative to "baseUrl"
+    },
     "listFiles": true,
     "typeRoots": [
       "./node_modules/@types/"

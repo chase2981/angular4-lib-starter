@@ -15,9 +15,8 @@
     "outDir": "./build",
     "declaration": true,
     "paths": {
-      "jquery": ["node_modules/jquery/dist/jquery"],
-      "@angular": ["node_modules/@angular/"],
-      "rxjs": ["node_modules/rxjs/"] // This mapping is relative to "baseUrl"
+      "@angular/*": ["node_modules/@angular/*"],
+      "rxjs/*": ["node_modules/rxjs/*"] // This mapping is relative to "baseUrl"
     },
     "listFiles": true,
     "typeRoots": [

@@ -1,15 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
+import { Component, ElementRef, EventEmitter, HostBinding, Input, Output } from '@angular/core';
 var ModalComponent = (function () {
     /**
      * @param {?} elementRef
      */
     function ModalComponent(elementRef) {
         this.options = {};
-        this.shown = new core_1.EventEmitter();
-        this.hidden = new core_1.EventEmitter();
-        this.loaded = new core_1.EventEmitter();
+        this.shown = new EventEmitter();
+        this.hidden = new EventEmitter();
+        this.loaded = new EventEmitter();
         this.classModal = true;
         this.classFade = true;
         this.elem = elementRef.nativeElement;
@@ -83,7 +81,7 @@ var ModalComponent = (function () {
         //$(this.elem).data('bs.modal', null);
     };
     ModalComponent.decorators = [
-        { type: core_1.Component, args: [{
+        { type: Component, args: [{
                     /* moduleId: module.id, */
                     selector: 'rd-modal',
                     template: "\n      <div class=\"modal-dialog modal-lg\" role=\"document\">\n        <div class=\"modal-content\">\n          <ng-content></ng-content>\n        </div>\n      </div>\n    "
@@ -93,19 +91,19 @@ var ModalComponent = (function () {
      * @nocollapse
      */
     ModalComponent.ctorParameters = function () { return [
-        { type: core_1.ElementRef, },
+        { type: ElementRef, },
     ]; };
     ModalComponent.propDecorators = {
-        'options': [{ type: core_1.Input },],
-        'shown': [{ type: core_1.Output },],
-        'hidden': [{ type: core_1.Output },],
-        'loaded': [{ type: core_1.Output },],
-        'classModal': [{ type: core_1.HostBinding, args: ['class.modal',] },],
-        'classFade': [{ type: core_1.HostBinding, args: ['class.fade',] },],
+        'options': [{ type: Input },],
+        'shown': [{ type: Output },],
+        'hidden': [{ type: Output },],
+        'loaded': [{ type: Output },],
+        'classModal': [{ type: HostBinding, args: ['class.modal',] },],
+        'classFade': [{ type: HostBinding, args: ['class.fade',] },],
     };
     return ModalComponent;
 }());
-exports.ModalComponent = ModalComponent;
+export { ModalComponent };
 function ModalComponent_tsickle_Closure_declarations() {
     /** @type {?} */
     ModalComponent.decorators;

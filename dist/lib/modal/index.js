@@ -1,8 +1,4 @@
-"use strict";
 /// <reference path="./jquery.d.ts" />
-Object.defineProperty(exports, "__esModule", { value: true });
-var modal_module_1 = require("./modal.module");
-exports.ModalModule = modal_module_1.ModalModule;
-var modal_component_1 = require("./modal.component");
-exports.ModalComponent = modal_component_1.ModalComponent;
+export { ModalModule } from './modal.module';
+export { ModalComponent } from './modal.component';
 //# sourceMappingURL=index.js.map

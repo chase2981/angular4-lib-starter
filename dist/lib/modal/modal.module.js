@@ -1,24 +1,21 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var common_1 = require("@angular/common");
-var forms_1 = require("@angular/forms");
-var modal_component_1 = require("./modal.component");
-exports.ModalComponent = modal_component_1.ModalComponent;
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './modal.component';
 var ModalModule = (function () {
     function ModalModule() {
     }
     ModalModule.decorators = [
-        { type: core_1.NgModule, args: [{
+        { type: NgModule, args: [{
                     imports: [
-                        forms_1.FormsModule,
-                        common_1.CommonModule,
+                        FormsModule,
+                        CommonModule,
                     ],
                     declarations: [
-                        modal_component_1.ModalComponent
+                        ModalComponent
                     ],
                     exports: [
-                        modal_component_1.ModalComponent
+                        ModalComponent
                     ],
                     providers: []
                 },] },
@@ -29,7 +26,7 @@ var ModalModule = (function () {
     ModalModule.ctorParameters = function () { return []; };
     return ModalModule;
 }());
-exports.ModalModule = ModalModule;
+export { ModalModule };
 function ModalModule_tsickle_Closure_declarations() {
     /** @type {?} */
     ModalModule.decorators;
@@ -39,4 +36,5 @@ function ModalModule_tsickle_Closure_declarations() {
      */
     ModalModule.ctorParameters;
 }
+export { ModalComponent };
 //# sourceMappingURL=modal.module.js.map

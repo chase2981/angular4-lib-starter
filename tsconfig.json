@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
+    "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
     // "mapRoot": ".",
@@ -15,8 +15,8 @@
     "outDir": "./build",
     "declaration": true,
     "paths": {
-      "@angular/*": ["node_modules/@angular/*"],
-      "rxjs/*": ["node_modules/rxjs/*"] // This mapping is relative to "baseUrl"
+      "@angular/*": ["./node_modules/@angular/*"],
+      "rxjs/*": ["./node_modules/rxjs/*"] // This mapping is relative to "baseUrl"
     },
     "listFiles": true,
     "typeRoots": [
@@ -30,8 +30,8 @@
     "./tmp/**/*.d.ts"
   ],
   "exclude": [
-    "**/*.spec.ts",
-    "**/node_modules"
+    "**/*.spec.ts"
+    // "**/node_modules"
   ],
   /* https://github.com/angular/angular/blob/745b59f49cacb55c54d11e948c011fbbf8b724f7/packages/compiler-cli/src/transformers/api.ts */
   // "angularCompilerOptions": {

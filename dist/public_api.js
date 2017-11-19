@@ -1,2 +1,3 @@
-export { ModalComponent, ModalModule } from './lib/index';
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3RtcC9wdWJsaWNfYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBUyxjQUFBLEVBQWdCLFdBQUEsRUFBWSxNQUFBLGFBQUEsQ0FBQSIsImZpbGUiOiJwdWJsaWNfYXBpLmpzIiwic291cmNlUm9vdCI6IiJ9
+export { ModalModule } from './lib/modal/modal.module';
+export { ModalComponent } from './lib/modal/modal.component';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3RtcC9wdWJsaWNfYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxXQUFBLEVBQVksTUFBQSwwQkFBQSxDQUFBO0FBQ3JCLE9BQU8sRUFBRSxjQUFBLEVBQWUsTUFBQSw2QkFBQSxDQUFBIiwiZmlsZSI6InB1YmxpY19hcGkuanMiLCJzb3VyY2VSb290IjoiIn0=

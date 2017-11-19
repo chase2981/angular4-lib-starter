@@ -1,2 +1,0 @@
-export { ModalComponent, ModalModule } from './modal/index';
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3RtcC9saWIvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFTLGNBQUEsRUFBZ0IsV0FBQSxFQUFZLE1BQUEsZUFBQSxDQUFBIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlUm9vdCI6IiJ9

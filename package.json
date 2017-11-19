@@ -39,6 +39,9 @@
     "url": "https://github.com/chase2981/angular4-lib-starter/issues"
   },
   "homepage": "https://github.com/chase2981/angular4-lib-starter#readme",
+  "bundleDependencies": [
+    
+  ],
   "dependencies": {
     "@angular/common": "4.3.3",
     "@angular/compiler": "4.3.3",

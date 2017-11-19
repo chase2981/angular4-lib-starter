@@ -26,7 +26,6 @@ then
 echo typescript success!!.
 # Copy non-js files from build to dist
 rsync -a build/ dist/
-rsync -a tmp/ dist/tmp/
 
 # Rollup simple-ui-lib.js
 $ROLLUP -c .rollup-config.js

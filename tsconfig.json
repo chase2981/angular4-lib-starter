@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "umd",
+    "module": "es2015",
     "moduleResolution": "node",
     "inlineSourceMap": true,
     "emitDecoratorMetadata": true,
@@ -15,7 +15,8 @@
     "declaration": true,
     "lib": ["es5", "es2015", "dom"],
     "types": [
-      "jasmine"
+      "jasmine",
+      "jquery"
     ]
   },
   "include": [

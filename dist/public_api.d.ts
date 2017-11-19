@@ -1,1 +1,1 @@
-export * from './lib/index';
+export { Modal, ModalComponent, ModalModule } from './lib/index';

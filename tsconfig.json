@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
+    "module": "umd",
     "moduleResolution": "node",
     "sourceMap": true,
-    // "mapRoot": ".",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noImplicitAny": false,
@@ -18,7 +17,6 @@
       "@angular/*": ["./node_modules/@angular/*"],
       "rxjs/*": ["./node_modules/rxjs/*"] // This mapping is relative to "baseUrl"
     },
-    "listFiles": true,
     "typeRoots": [
       "./node_modules/@types/"
     ]
